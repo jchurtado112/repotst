@@ -13,5 +13,5 @@ jobs:
       - name: task1 for printing OS Details
         run: uname -a
       - name: task2 to print hostname
-        run: hostname -l
+        run: hostname
         
