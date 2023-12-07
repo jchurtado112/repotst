@@ -5,7 +5,9 @@ on:
     branches:
     - main
     - dev
-  workflow_dispatch:
+  workflow_dispatch:      # enable button to manually run the workflow
+  schedule:               # schedule job to run
+    - cron: "40 * * * *"  # will run workflow every hour past 40 mins
 
 jobs:
   job1:
