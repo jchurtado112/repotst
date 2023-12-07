@@ -9,7 +9,7 @@ on:
   
 jobs:
   job1-buildjob:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:  # 2 tasks or 2 steps in this workflow
       - name: task1 for printing OS Details
         run: uname -a
@@ -18,7 +18,9 @@ jobs:
       - name: task3
         run: sleep 30 # do nothing for 30 seconds
       - name: task4
-        run: echo "step4  and job1-buildjob completed"
+        run: |
+          echo "step4  and job1-buildjob completed"
+          touch /tmp/jchurtado
   job2-testjob:
     runs-on: ubuntu-latest
     steps:  # 2 tasks or 2 steps in this workflow
