@@ -11,7 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Checkout
+        uses: actions/checkout@4.1.1
+      - name: step2
+      - run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
           pwd
           
