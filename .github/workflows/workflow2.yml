@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
       - name: step2
-      - run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
+        run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
           pwd
           
