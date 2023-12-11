@@ -27,4 +27,16 @@ jobs:
           echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
           java -version
           pwd
-          
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: step3
+        run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
+          ls -l
+          echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
+          echo "value for variable user1: $USER1"
+          echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
+          java -version
+          pwd
