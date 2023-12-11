@@ -7,6 +7,8 @@ on:
     branches:
       - main
 
+env: 
+  USER1: Jesus
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +19,7 @@ jobs:
         run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
           echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
+          echo "value for variable user1: $$USER1"
           java -version
           pwd
           
