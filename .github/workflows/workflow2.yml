@@ -27,6 +27,7 @@ jobs:
           echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
           echo "value for variable user1: $USER1"
           echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
+          echo " value for user1 at repo level: ${{ vars.USER1 }} and server name: ${{ vars.SERVER_NAME }} "
           java -version
           pwd
   test:
