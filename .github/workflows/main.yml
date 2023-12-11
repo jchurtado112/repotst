@@ -20,7 +20,7 @@ jobs:
       - name: task4
         run: |
           echo "step4  and job1-buildjob completed"
-          echo "this is variable user1 from repo level: ${{ vars.USER1 }} "
+          echo "this is variable user1 from repo level: ${{ vars.USER1 }}  "
           touch /tmp/jchurtado
   job2-testjob:
     runs-on: ubuntu-latest
