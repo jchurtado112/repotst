@@ -16,7 +16,7 @@ jobs:
       - name: step2
         run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
-          echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }}
+          echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
           java -version
           pwd
           
