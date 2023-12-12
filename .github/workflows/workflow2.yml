@@ -33,7 +33,7 @@ jobs:
           echo "Sending this prod env secret to new file: ${{ secrets.TOKEN1 }} " >> /tmp/jchurtado-pass
           pwd
           if: github.event_name == 'pull_request'
-          - run: "Print the value of user3: $USER3 "
+          run: "Print the value of user3: $USER3 "
   test:
     runs-on: jchurtado-devops
     environment: dev
