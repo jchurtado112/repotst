@@ -36,12 +36,12 @@ jobs:
           pwd
   test:
     runs-on: jchurtado-devops
-    if: github.event_name == 'pull_request'
     environment: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
-      - name: step3
+      - name: step3 run only on Linux
+        if: runner.os == 'Linux'
         run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
           echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
@@ -50,13 +50,15 @@ jobs:
           echo "Printing the user1 variable from DE environment: ${{ vars.USER1 }} "
           echo "Printing the secret dev env: ${{ secrets.TOKEN1 }} "
           echo "Sending the secret dev env to this file: ${{ secrets.TOKEN1 }} " >> /tmp/jchurtado-pass 
+          echo ${{ runner.os }} "
           pwd
   deploy:
     runs-on: jchurtado-devops
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
-      - name: step3
+      - name: step3 to be executed if it is equal to Windows
+        if: runner.os != 'Linux'
         run: |  # # git clone https://github.com/admingagan/Maven-Project.git #cd Maven-Project
           ls -l
           echo "gtihub repo URL is ${{ GITHUB.REPOSITORY }} anc branch name is ${{ GITHUB.REF_NAME }} "
