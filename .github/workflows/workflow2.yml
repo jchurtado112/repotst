@@ -30,7 +30,7 @@ jobs:
           echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
           echo " value for user1 at repo level: ${{ vars.USER1 }} and server name: ${{ vars.SERVER_NAME }}  "
           echo "printing first the prod env secret variable: ${{ secrets.TOKEN1 }} "
-          echo "Sending this prod env secret to new file: ${{ secrets.TOKEN1 }} >> /tmp/jchurtado-pass
+          echo "Sending this prod env secret to new file: ${{ secrets.TOKEN1 }} >> /tmp/jchurtado-pass "
           pwd
   test:
     runs-on: jchurtado-devops
@@ -46,7 +46,7 @@ jobs:
           echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
           echo "Printing the user1 variable from DE environment: ${{ vars.USER1 }} "
           echo "Printing the secret dev env: ${{ secrets.TOKEN1 }} "
-          echo "Sending the secret dev env to this file: ${{ secrets.TOKEN1 }} " >> /tmp/jchurtado-pass
+          echo "Sending the secret dev env to this file: ${{ secrets.TOKEN1 }} " >> /tmp/jchurtado-pass "
           pwd
   deploy:
     runs-on: jchurtado-devops
@@ -61,5 +61,5 @@ jobs:
           echo "This is user1: $USER1, this is user2: $USER2, and this is user3: $USER3"
           echo "printing the USER1 from PRDO environement: ${{ vars.USER1 }}"
           echo "Printing the repo level secret env: ${{ secrets.TOKEN1 }} "
-          echo "Sending this repo secret level env to this file: ${{ secrets.TOKEN1 }} >> /tmp/jchurtado-pass
+          echo "Sending this repo secret level env to this file: ${{ secrets.TOKEN1 }} >> /tmp/jchurtado-pass "
           pwd
