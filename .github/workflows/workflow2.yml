@@ -50,7 +50,7 @@ jobs:
           echo "Printing the user1 variable from DE environment: ${{ vars.USER1 }} "
           echo "Printing the secret dev env: ${{ secrets.TOKEN1 }} "
           echo "Sending the secret dev env to this file: ${{ secrets.TOKEN1 }} " >> /tmp/jchurtado-pass 
-          echo ${{ runner.os }} "
+          echo " ${{ runner.os }} "
           pwd
   deploy:
     runs-on: jchurtado-devops
