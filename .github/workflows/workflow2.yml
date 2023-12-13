@@ -16,7 +16,7 @@ jobs:
     env:
       USER2: Hurtado
       USER1: Jesus_joblevel
-    runs-on: ubuntu-latest #jchurtado-devops   ##this is my repo hosted in AWS runner
+    runs-on: ubuntu-latest  #jchurtado-devops   ##this is my repo hosted in AWS runner
     environment: prod
     steps:
       - name: Checkout
